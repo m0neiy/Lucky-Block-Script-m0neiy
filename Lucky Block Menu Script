@@ -1,0 +1,641 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "❓Lucky Block Menu❓",
+   LoadingTitle = "Lucky Block Menu",
+   LoadingSubtitle = "by m0neiy#1174",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Big Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Lucky Block Menu",
+      Subtitle = "By m0neiy#1174",
+      Note = "Key in Discord",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"BETA"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+Rayfield:Notify({
+   Title = "Executed",
+   Content = "Notification Content",
+   Duration = 5,
+   Image = nil,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+},
+})
+
+local MainTab = Window:CreateTab("🎁Lucky", nil) -- Title, Image
+local MainSection = MainTab:CreateSection("Main")
+
+local Button = MainTab:CreateButton({
+   Name = "📦 Lucky Block",
+   Callback = function()
+        game.ReplicatedStorage.SpawnLuckyBlock:FireServer()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "💥 Super Block",
+   Callback = function()
+        game.ReplicatedStorage.SpawnSuperBlock:FireServer()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "💎 Diamond Block",
+   Callback = function()
+        game.ReplicatedStorage.SpawnDiamondBlock:FireServer()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "✨ Rainbow Block",
+   Callback = function()
+        game.ReplicatedStorage.SpawnRainbowBlock:FireServer()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "🌌 Galaxy Block",
+   Callback = function()
+        game.ReplicatedStorage.SpawnGalaxyBlock:FireServer()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "🌀 Void Block",
+   Callback = function()
+        game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+        game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()
+        game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+        game:GetService("ReplicatedStorage").SpawnRainbowBlock:FireServer()
+        game:GetService("ReplicatedStorage").SpawnGalaxyBlock:FireServer()
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "👾 MEGA HACKER Block 👾",
+   Callback = function()
+        game.ReplicatedStorage.SpawnLuckyBlock:FireServer()
+        game.ReplicatedStorage.SpawnLuckyBlock:FireServer()
+        game.ReplicatedStorage.SpawnLuckyBlock:FireServer()
+        game.ReplicatedStorage.SpawnLuckyBlock:FireServer()
+        game.ReplicatedStorage.SpawnSuperBlock:FireServer()
+        game.ReplicatedStorage.SpawnSuperBlock:FireServer()
+        game.ReplicatedStorage.SpawnSuperBlock:FireServer()
+        game.ReplicatedStorage.SpawnSuperBlock:FireServer()
+        game.ReplicatedStorage.SpawnDiamondBlock:FireServer()
+        game.ReplicatedStorage.SpawnDiamondBlock:FireServer()
+        game.ReplicatedStorage.SpawnDiamondBlock:FireServer()
+        game.ReplicatedStorage.SpawnDiamondBlock:FireServer()
+        game.ReplicatedStorage.SpawnRainbowBlock:FireServer()
+        game.ReplicatedStorage.SpawnRainbowBlock:FireServer()
+        game.ReplicatedStorage.SpawnRainbowBlock:FireServer()
+        game.ReplicatedStorage.SpawnRainbowBlock:FireServer()
+        game.ReplicatedStorage.SpawnGalaxyBlock:FireServer()
+        game.ReplicatedStorage.SpawnGalaxyBlock:FireServer()
+        game.ReplicatedStorage.SpawnGalaxyBlock:FireServer()
+        game.ReplicatedStorage.SpawnGalaxyBlock:FireServer()
+   end,
+})
+
+local MiddleTab = Window:CreateTab("🤳Teleport", nil) -- Title, Image
+local MiddleSection = MiddleTab:CreateSection("Middle")
+
+local Button = MiddleTab:CreateButton({
+   Name = "💫 Middle Teleport",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1041.23035, 198.375839, 90.9455185, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+   end,
+})
+
+local Button = MiddleTab:CreateButton({
+   Name = "📦 Lucky Middle 1",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1031.7373, 194.411255, 81.4701385, -0.707068563, -9.91085617e-05, 0.707145572, 9.91085617e-05, 0.99999994, 0.000239250759, -0.707145572, 0.000239250759, -0.707068563)
+   end,
+})
+
+local Button = MiddleTab:CreateButton({
+   Name = "📦 Lucky Middle 2",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1050.69446, 194.40889, 81.4710693, -0.707134247, -4.6719324e-05, -0.707079291, -0.000112784233, 1, 4.6719324e-05, 0.707079291, 0.000112784233, -0.707134247)
+   end,
+})
+
+local Button = MiddleTab:CreateButton({
+   Name = "📦 Lucky Middle 3",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1031.73633, 194.408936, 100.426682, 0.707134247, -0.000239255329, 0.707079291, 0.000239255329, 0.99999994, 9.9097364e-05, -0.707079291, 9.9097364e-05, 0.707134247)
+   end,
+})
+
+local Button = MiddleTab:CreateButton({
+   Name = "📦 Lucky Middle 4",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1050.69263, 194.406586, 100.427933, 0.707068086, -0.000112786438, -0.707145572, 4.67140635e-05, 1, -0.000112786438, 0.707145572, 4.67140635e-05, 0.707068086)
+   end,
+})
+
+local MiddleSection = MiddleTab:CreateSection("Bases")
+
+local Button = MiddleTab:CreateButton({
+   Name = "🟨 Yellow Base",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-926.944397, 193.500061, -113.046654, 0.99990356, -5.80730075e-10, 0.0138882985, -5.32000055e-10, 1, 8.01162798e-08, -0.0138882985, -8.01159388e-08, 0.99990356)
+   end,
+})
+
+local Button = MiddleTab:CreateButton({
+   Name = "🟩 Green Base",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1155.1687, 193.500046, -112.998756, 0.999744833, -5.92690119e-10, 0.0225900654, 2.12870699e-09, 1, -6.79711931e-08, -0.0225900654, 6.80019383e-08, 0.999744833)
+   end,
+})
+
+local Button = MiddleTab:CreateButton({
+   Name = "⏹ Cyan Base",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1245.26111, 193.500565, -23.1128712, -0.00347258896, 4.32179483e-08, 0.99999398, 3.4396388e-09, 1, -4.32062635e-08, -0.99999398, 3.28958039e-09, -0.00347258896)
+   end,
+})
+
+local Button = MiddleTab:CreateButton({
+   Name = "🟦 Blue Base",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1245.25854, 193.499908, 205.233154, -0.0190865733, 3.86325638e-09, 0.999817848, -2.60604711e-08, 1, -4.36145564e-09, -0.999817848, -2.61389683e-08, -0.0190865733)
+   end,
+})
+
+local Button = MiddleTab:CreateButton({
+   Name = "🟥 Red Base",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1155.8064, 193.500015, 294.755249, -0.999994993, 4.82615681e-09, 0.00316798012, 5.15997467e-09, 1, 1.05364379e-07, -0.00316798012, 1.05380195e-07, -0.999994993)
+   end,
+})
+
+local Button = MiddleTab:CreateButton({
+   Name = "🟪 Purple Base",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-927.085632, 193.500046, 294.798645, -0.999775231, 1.31893598e-08, -0.0212007798, 1.38739056e-08, 1, -3.21416032e-08, 0.0212007798, -3.24285168e-08, -0.999775231)
+   end,
+})
+
+local Button = MiddleTab:CreateButton({
+   Name = "🌸 Pink Base",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-837.330566, 193.500046, 205.133545, -0.00668904977, -9.55452677e-08, -0.999977648, 6.1615431e-08, 1, -9.59595639e-08, 0.999977648, -6.22559284e-08, -0.00668904977)
+   end,
+})
+
+local Button = MiddleTab:CreateButton({
+   Name = "📒 Orange Base",
+   Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-837.213379, 193.500046, -22.8870621, 0.00967965275, 7.52916307e-08, -0.999953151, 3.16241362e-08, 1, 7.56012852e-08, 0.999953151, -3.23544462e-08, 0.00967965275)
+   end,
+})
+
+local SpeedJumpTab = Window:CreateTab("🙍‍♂️Player", nil) -- Title, Image
+local SpeedJumpSection = SpeedJumpTab:CreateSection("SpeedJump")
+
+local Slider = SpeedJumpTab:CreateSlider({
+   Name = "🏃‍♂️ WalkSpeed",
+   Range = {16, 999},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+   end,
+})
+
+local Slider = SpeedJumpTab:CreateSlider({
+   Name = "🧍‍♂️ JumpPower",
+   Range = {50, 999},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 50,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+   end,
+})
+
+local SpeedJumpSection = SpeedJumpTab:CreateSection("Player")
+
+local Button = SpeedJumpTab:CreateButton({
+   Name = "Inf Jump",
+   Callback = function()
+         local InfiniteJumpEnabled = true
+         game:GetService("UserInputService").JumpRequest:connect(function()
+            if InfiniteJumpEnabled then
+               game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+            end
+         end)
+   end,
+})
+
+local Button = SpeedJumpTab:CreateButton({
+   Name = "Noclip",
+   Callback = function()
+      local Workspace = game:GetService("Workspace")
+      local CoreGui = game:GetService("CoreGui")
+      local Players = game:GetService("Players")
+      local Noclip = Instance.new("ScreenGui")
+      local BG = Instance.new("Frame")
+      local Title = Instance.new("TextLabel")
+      local Toggle = Instance.new("TextButton")
+      local StatusPF = Instance.new("TextLabel")
+      local Status = Instance.new("TextLabel")
+      local Credit = Instance.new("TextLabel")
+      local Plr = Players.LocalPlayer
+      local Clipon = false
+      
+      Noclip.Name = "Noclip"
+      Noclip.Parent = game.CoreGui
+      
+      BG.Name = "BG"
+      BG.Parent = Noclip
+      BG.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+      BG.BorderColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+      BG.BorderSizePixel = 2
+      BG.Position = UDim2.new(0.149479166, 0, 0.82087779, 0)
+      BG.Size = UDim2.new(0, 210, 0, 127)
+      BG.Active = true
+      BG.Draggable = true
+      
+      Title.Name = "Title"
+      Title.Parent = BG
+      Title.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451)
+      Title.BorderColor3 = Color3.new(0.180392, 0, 0.431373)
+      Title.BorderSizePixel = 2
+      Title.Size = UDim2.new(0, 210, 0, 33)
+      Title.Font = Enum.Font.Highway
+      Title.Text = "Noclip"
+      Title.TextColor3 = Color3.new(1, 1, 1)
+      Title.FontSize = Enum.FontSize.Size32
+      Title.TextSize = 30
+      Title.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
+      Title.TextStrokeTransparency = 0
+      
+      Toggle.Parent = BG
+      Toggle.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451)
+      Toggle.BorderColor3 = Color3.new(0.180392, 0, 0.431373)
+      Toggle.BorderSizePixel = 2
+      Toggle.Position = UDim2.new(0.152380958, 0, 0.374192119, 0)
+      Toggle.Size = UDim2.new(0, 146, 0, 36)
+      Toggle.Font = Enum.Font.Highway
+      Toggle.FontSize = Enum.FontSize.Size28
+      Toggle.Text = "Toggle"
+      Toggle.TextColor3 = Color3.new(1, 1, 1)
+      Toggle.TextSize = 25
+      Toggle.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
+      Toggle.TextStrokeTransparency = 0
+      
+      StatusPF.Name = "StatusPF"
+      StatusPF.Parent = BG
+      StatusPF.BackgroundColor3 = Color3.new(1, 1, 1)
+      StatusPF.BackgroundTransparency = 1
+      StatusPF.Position = UDim2.new(0.314285725, 0, 0.708661377, 0)
+      StatusPF.Size = UDim2.new(0, 56, 0, 20)
+      StatusPF.Font = Enum.Font.Highway
+      StatusPF.FontSize = Enum.FontSize.Size24
+      StatusPF.Text = "Status:"
+      StatusPF.TextColor3 = Color3.new(1, 1, 1)
+      StatusPF.TextSize = 20
+      StatusPF.TextStrokeColor3 = Color3.new(0.333333, 0.333333, 0.333333)
+      StatusPF.TextStrokeTransparency = 0
+      StatusPF.TextWrapped = true
+      
+      Status.Name = "Status"
+      Status.Parent = BG
+      Status.BackgroundColor3 = Color3.new(1, 1, 1)
+      Status.BackgroundTransparency = 1
+      Status.Position = UDim2.new(0.580952346, 0, 0.708661377, 0)
+      Status.Size = UDim2.new(0, 56, 0, 20)
+      Status.Font = Enum.Font.Highway
+      Status.FontSize = Enum.FontSize.Size14
+      Status.Text = "off"
+      Status.TextColor3 = Color3.new(0.666667, 0, 0)
+      Status.TextScaled = true
+      Status.TextSize = 14
+      Status.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
+      Status.TextWrapped = true
+      Status.TextXAlignment = Enum.TextXAlignment.Left
+      
+      Credit.Name = "Credit"
+      Credit.Parent = BG
+      Credit.BackgroundColor3 = Color3.new(1, 1, 1)
+      Credit.BackgroundTransparency = 1
+      Credit.Position = UDim2.new(0.195238099, 0, 0.866141737, 0)
+      Credit.Size = UDim2.new(0, 128, 0, 17)
+      Credit.Font = Enum.Font.SourceSans
+      Credit.FontSize = Enum.FontSize.Size18
+      Credit.Text = ""
+      Credit.TextColor3 = Color3.new(1, 1, 1)
+      Credit.TextSize = 16
+      Credit.TextStrokeColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+      Credit.TextStrokeTransparency = 1
+      Credit.TextWrapped = false
+      
+      Toggle.MouseButton1Click:connect(function()
+         if Status.Text == "off" then
+            Clipon = true
+            Status.Text = "on"
+            Status.TextColor3 = Color3.new(0,185,0)
+            Stepped = game:GetService("RunService").Stepped:Connect(function()
+               if not Clipon == false then
+                  for a, b in pairs(Workspace:GetChildren()) do
+                      if b.Name == Plr.Name then
+                      for i, v in pairs(Workspace[Plr.Name]:GetChildren()) do
+                      if v:IsA("BasePart") then
+                      v.CanCollide = false
+                      end end end end
+               else
+                  Stepped:Disconnect()
+               end
+            end)
+         elseif Status.Text == "on" then
+            Clipon = false
+            Status.Text = "off"
+            Status.TextColor3 = Color3.new(170,0,0)
+         end
+      end)
+   end,
+})
+
+local Button = SpeedJumpTab:CreateButton({
+   Name = "🚫 Admin Commands 🚫",
+   Callback = function()
+         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   end,
+})
+
+local CombatTab = Window:CreateTab("⚔ Combat", nil) -- Title, Image
+local CombatSection = CombatTab:CreateSection("Combat")
+
+local Button = CombatTab:CreateButton({
+   Name = "⚔ Hitbox 10 Click T",
+   Callback = function()
+         -- Variables
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+-- Settings
+
+bind = "" 
+bind2 = "t"
+
+-- Script
+
+mouse.KeyDown:connect(function(key)
+if key == bind then
+player.Character.HumanoidRootPart.CFrame = CFrame.new(1254.09656, 137.906067, -172.128204)
+end
+end)
+
+mouse.KeyDown:connect(function(key2)
+if key2 == bind2 then
+_G.HeadSize = 10
+_G.Disabled = true
+
+
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end
+end)
+   end,
+})
+
+local Button = CombatTab:CreateButton({
+   Name = "⚔ Hitbox 20 Click T",
+   Callback = function()
+         -- Variables
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+-- Settings
+
+bind = "" 
+bind2 = "t"
+
+-- Script
+
+mouse.KeyDown:connect(function(key)
+if key == bind then
+player.Character.HumanoidRootPart.CFrame = CFrame.new(1254.09656, 137.906067, -172.128204)
+end
+end)
+
+mouse.KeyDown:connect(function(key2)
+if key2 == bind2 then
+_G.HeadSize = 20
+_G.Disabled = true
+
+
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end
+end)
+   end,
+})
+
+local Button = CombatTab:CreateButton({
+   Name = "⚔ Hitbox 30 Click T",
+   Callback = function()
+         -- Variables
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+-- Settings
+
+bind = "" 
+bind2 = "t"
+
+-- Script
+
+mouse.KeyDown:connect(function(key)
+if key == bind then
+player.Character.HumanoidRootPart.CFrame = CFrame.new(1254.09656, 137.906067, -172.128204)
+end
+end)
+
+mouse.KeyDown:connect(function(key2)
+if key2 == bind2 then
+_G.HeadSize = 30
+_G.Disabled = true
+
+
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end
+end)
+   end,
+})
+
+local Button = CombatTab:CreateButton({
+   Name = "⚔ Hitbox 40 Click T",
+   Callback = function()
+         -- Variables
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+-- Settings
+
+bind = "" 
+bind2 = "t"
+
+-- Script
+
+mouse.KeyDown:connect(function(key)
+if key == bind then
+player.Character.HumanoidRootPart.CFrame = CFrame.new(1254.09656, 137.906067, -172.128204)
+end
+end)
+
+mouse.KeyDown:connect(function(key2)
+if key2 == bind2 then
+_G.HeadSize = 40
+_G.Disabled = true
+
+
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end
+end)
+   end,
+})
+
+local Button = CombatTab:CreateButton({
+   Name = "⚔ Hitbox 50 Click T",
+   Callback = function()
+         -- Variables
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+-- Settings
+
+bind = "" 
+bind2 = "t"
+
+-- Script
+
+mouse.KeyDown:connect(function(key)
+if key == bind then
+player.Character.HumanoidRootPart.CFrame = CFrame.new(1254.09656, 137.906067, -172.128204)
+end
+end)
+
+mouse.KeyDown:connect(function(key2)
+if key2 == bind2 then
+_G.HeadSize = 50
+_G.Disabled = true
+
+
+if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end
+end)
+   end,
+})
+
+local Section = CombatTab:CreateSection("Esp")
+
+local Button = CombatTab:CreateButton({
+   Name = "🔎 Esp 🔍",
+   Callback = function()
+         loadstring(game:HttpGet(('https://raw.githubusercontent.com/zachisfunny/esp-unversal/main/script'),true))()
+   end,
+})
+
+local MiscTab = Window:CreateTab("📃Misc", nil) -- Title, Image
+local MiscSection = MiscTab:CreateSection("Misc")
+
+local Button = MiscTab:CreateButton({
+   Name = "Anti Afk",
+   Callback = function()
+      for i,v in pairs(getconnections(game:GetService("Players").LocalPlayer.Idled)) do
+         v:Disable()
+         end
+   end,
+})
+
+local Button = MiscTab:CreateButton({
+   Name = "Version Beta 1.0",
+   Callback = function()
+         
+   end,
+})
